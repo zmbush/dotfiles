@@ -40,7 +40,7 @@ castles=()
 
 while read line; do
   castle=$(echo "$line" | sed '/^[ \t]*#/d;s/^[ \t]*\(.*\)[ \t]*$/\1/')
-  castle=$(echo "$castle" | sed 's/^zmbush/https://github.com/zmbush/')
+  castle=$(echo "$castle" | sed 's/^zmbush/https:\/\/github.com\/zmbush/')
   if [[ -n $castle ]]; then
     castles+=("$castle")
   fi
